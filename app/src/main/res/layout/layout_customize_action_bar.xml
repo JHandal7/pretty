@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/btn_back"
+        android:layout_width="@dimen/dimen_button_back"
+        android:layout_height="@dimen/dimen_button_back">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ico_back" />
+    </FrameLayout>
+
+    <com.suusoft.restaurantuser.widgets.textview.TextViewLatoLight
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/btn_menu"
+        android:layout_toRightOf="@+id/btn_back"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_xxlarge" />
+
+    <FrameLayout
+        android:id="@+id/btn_menu"
+        android:layout_width="@dimen/dimen_button_back"
+        android:layout_height="@dimen/dimen_button_back"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ico_menu" />
+    </FrameLayout>
+</RelativeLayout>

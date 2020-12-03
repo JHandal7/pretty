@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dimen_1x"
+        android:layout_marginLeft="@dimen/dimen_1x"
+        android:layout_marginRight="@dimen/dimen_1x"
+        android:gravity="center"
+        android:background="@color/transparent"
+        android:orientation="vertical">
+
+        <!--android:background="@drawable/bg_border_grey_radius_white"-->
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/colorPrimary"
+            android:id="@+id/img_avatar"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dimen_2x"
+            android:layout_marginTop="@dimen/dimen_2x"
+            android:src="@drawable/no_avatar" />
+
+        <com.suusoft.restaurantuser.widgets.textview.TextViewLatoHeavy
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_2x"
+            android:layout_marginRight="@dimen/dimen_2x"
+            android:gravity="center"
+            android:text="@string/wellcome"
+            android:textAllCaps="true"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="@dimen/text_size_large" />
+
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/img_my_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_x1x"
+                android:layout_marginTop="@dimen/dimen_x1x"
+                android:src="@drawable/ic_user"
+                android:tint="@color/color_red" />
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewLatoRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_1x"
+                android:layout_marginRight="@dimen/dimen_1x"
+                android:layout_marginTop="@dimen/dimen_x1x"
+                android:layout_toLeftOf="@+id/img_arrow_right2"
+                android:layout_toRightOf="@+id/img_my_detail"
+                android:text="@string/my_details"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_size_xnormal" />
+
+            <ImageView
+                android:id="@+id/img_arrow_right2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/dimen_x1x"
+                android:layout_marginRight="@dimen/dimen_x1x"
+                android:layout_marginTop="@dimen/dimen_x1x"
+                android:src="@drawable/ic_arrow_right"
+                android:tint="@color/color_red" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img_arrow_right2"
+                android:layout_marginLeft="@dimen/dimen_1x"
+                android:layout_toRightOf="@+id/img_my_detail"
+                android:background="@color/colorPrimary" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="@dimen/dimen_2x"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/dimen_4x"
+            android:layout_marginRight="@dimen/dimen_4x"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+                android:id="@+id/tv_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_6x"
+                android:background="@drawable/bg_btn_account"
+                android:gravity="center"
+                android:padding="@dimen/dimen_x1x"
+                android:text="@string/profile"
+                android:textAllCaps="true"
+                android:textColor="@color/textColorBtnApp"
+                android:textSize="@dimen/text_size_normal" />
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+                android:id="@+id/tv_change_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_x1x"
+                android:background="@drawable/bg_btn_account"
+                android:gravity="center"
+                android:padding="@dimen/dimen_x1x"
+                android:text="@string/change_password"
+                android:textAllCaps="true"
+                android:textColor="@color/textColorBtnApp"
+                android:textSize="@dimen/text_size_normal" />
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+                android:id="@+id/tv_my_orders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_x1x"
+                android:background="@drawable/bg_btn_account"
+                android:gravity="center"
+                android:padding="@dimen/dimen_x1x"
+                android:text="@string/my_orders"
+                android:textAllCaps="true"
+                android:textColor="@color/textColorBtnApp"
+                android:textSize="@dimen/text_size_normal" />
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+                android:id="@+id/tv_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_x1x"
+                android:background="@drawable/bg_btn_account"
+                android:gravity="center"
+                android:padding="@dimen/dimen_x1x"
+                android:text="@string/about"
+                android:textAllCaps="true"
+                android:textColor="@color/textColorBtnApp"
+                android:textSize="@dimen/text_size_normal" />
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.suusoft.restaurantuser.main.menu.PaymentUserInforVM" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_editext_cart"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_2x"
+            android:orientation="horizontal">
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/dimen_2x"
+                android:text="@string/first_name"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_size_large" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_2x"
+                android:background="@drawable/bg_editext_cart"
+                android:gravity="right"
+                android:maxLines="1"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:enabled="@{viewModel.isEnableFields}"
+                android:text="@={viewModel.firstName}"
+                android:textColor="@color/payment_text_hind"
+                android:textColorHint="@color/payment_text_hind"
+                android:textSize="@dimen/text_size_large" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/payment_item_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_2x"
+            android:orientation="horizontal">
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/dimen_2x"
+                android:text="@string/last_name"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_size_large" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_2x"
+                android:background="@drawable/bg_editext_cart"
+                android:gravity="right"
+                android:maxLines="1"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:enabled="@{viewModel.isEnableFields}"
+                android:text="@={viewModel.lastName}"
+                android:textColor="@color/payment_text_hind"
+                android:textColorHint="@color/payment_text_hind"
+                android:textSize="@dimen/text_size_large" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/payment_item_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_2x"
+            android:orientation="horizontal">
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/dimen_2x"
+                android:text="@string/payment_phone"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_size_large" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_2x"
+                android:background="@drawable/bg_editext_cart"
+                android:gravity="right"
+                android:inputType="number"
+                android:maxLines="1"
+                android:imeOptions="actionNext"
+
+                android:enabled="@{viewModel.isEnableFields}"
+                android:text="@={viewModel.phone}"
+                android:textColor="@color/payment_text_hind"
+                android:textColorHint="@color/payment_text_hind"
+                android:textSize="@dimen/text_size_large" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/payment_item_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_2x"
+            android:orientation="horizontal">
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/dimen_2x"
+                android:text="@string/payment_address"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_size_large" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_2x"
+                android:background="@drawable/bg_editext_cart"
+                android:gravity="right"
+                android:inputType="text"
+                android:maxLines="1"
+                android:imeOptions="actionNext"
+
+                android:enabled="@{viewModel.isEnableFields}"
+                android:text="@={viewModel.address}"
+                android:textColor="@color/payment_text_hind"
+                android:textColorHint="@color/payment_text_hind"
+                android:textSize="@dimen/text_size_large" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/payment_item_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_2x"
+            android:orientation="horizontal">
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/dimen_2x"
+                android:text="@string/email_"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_size_large" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_2x"
+                android:background="@drawable/bg_editext_cart"
+                android:gravity="right"
+                android:maxLines="1"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:enabled="@{viewModel.isEnableFields}"
+                android:text="@={viewModel.email}"
+                android:textColor="@color/payment_text_hind"
+                android:textColorHint="@color/payment_text_hind"
+                android:textSize="@dimen/text_size_large" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/payment_item_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_2x"
+            android:orientation="horizontal">
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/dimen_2x"
+                android:text="@string/note"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_size_large" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_2x"
+                android:background="@drawable/bg_editext_cart"
+                android:gravity="right"
+                android:maxLines="1"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:enabled="@{viewModel.isEnableFields}"
+                android:text="@={viewModel.note}"
+                android:textColor="@color/payment_text_hind"
+                android:textColorHint="@color/payment_text_hind"
+                android:textSize="@dimen/text_size_large" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/payment_item_divider" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_2x"
+            android:orientation="horizontal">
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/dimen_2x"
+                android:text="@string/payment_same_address"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_size_large" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:onClick="@{viewModel::onEditCheckedChange}"
+                android:checked="@{viewModel.isEnableFields}" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/payment_item_divider" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/grey"
+                    android:gravity="center"
+                    android:onClick="@{viewModel::onClickCancel}"
+                    android:padding="@dimen/dimen_2x"
+                    android:text="@string/cancel"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_xlarge" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:onClick="@{viewModel::onClickContinue}"
+                    android:padding="@dimen/dimen_2x"
+                    android:text="Continues"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_xlarge" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

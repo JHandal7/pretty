@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.suusoft.restaurantuser.main.detail.ItemUserOfferVM" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_2x">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_avatar"
+                android:layout_width="@dimen/dimen_6x"
+                android:layout_height="@dimen/dimen_6x"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="0dp"
+                app:url = "@{viewModel.image}"/>
+
+            <RelativeLayout
+                android:id="@+id/rlt_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_2x"
+                android:layout_marginRight="@dimen/dimen_2x"
+                android:layout_toLeftOf="@+id/lbl_accept"
+                android:layout_toRightOf="@+id/civ_avatar">
+
+                <com.suusoft.restaurantuser.widgets.textview.TextViewRegular
+                    android:id="@+id/lbl_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="@{viewModel.name}"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/text_size_small" />
+
+                <RatingBar
+                    android:id="@+id/rb_rate"
+                    style="@style/ratingbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/lbl_name"
+                    android:isIndicator="true"
+                    android:transformPivotX="0dp"
+                    android:transformPivotY="0dp" />
+
+            </RelativeLayout>
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewRegular
+                android:id="@+id/lbl_accept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bg_pressed_radius_yellowdark"
+                android:padding="@dimen/dimen_1x"
+                android:text="Assign"
+                android:onClick="@{viewModel::onItemClicked}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

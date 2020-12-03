@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.suusoft.restaurantuser.widgets.textview.TextViewLatoRegular xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_name"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ellipsize="marquee"
+    android:marqueeRepeatLimit="marquee_forever"
+    android:padding="@dimen/dimen_1x"
+    android:gravity="center"
+    android:singleLine="true"
+    android:text="name"
+    android:drawableRight="@drawable/ic_arrow_drop_down"
+    android:textColor="@color/white"
+    android:textSize="@dimen/text_size_normal" />

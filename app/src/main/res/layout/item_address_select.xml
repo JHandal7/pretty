@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.suusoft.restaurantuser.main.mycart.ItemAddressSelectVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{viewModel::onItemClicked}"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dimen_2x"
+            android:paddingLeft="@dimen/dimen_1x"
+            android:paddingRight="@dimen/dimen_1x"
+            android:paddingTop="@dimen/dimen_2x">
+
+            <ImageView
+                android:id="@+id/img_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_location"
+                android:tint="@color/colorPrimary" />
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewLatoRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/ckb_select"
+                android:layout_toRightOf="@+id/img_location"
+                android:text="@{viewModel.address}"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/text_size_normal" />
+
+            <CheckBox
+                android:id="@+id/ckb_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:checked="@{viewModel.isSelected}"
+                android:onClick="@{viewModel::onItemClicked}"
+                android:tint="@color/colorPrimary" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/dividerColor" />
+    </LinearLayout>
+</layout>

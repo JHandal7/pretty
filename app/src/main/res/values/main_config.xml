@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- app's name -->
+    <string name="app_name">Fastfood Restaurant</string>
+
+    <string name="URL_API">https://www.perumobile.net/Restaurant/fast/</string>
+    <string name="URL_Company">http://suusoft.com</string>
+
+    <!-- key config -->
+    <string name="facebook_app_id">583210795726022</string> <!--config by truongnv1292@gmail.com-->
+    <string name="fb_login_protocol_scheme">fb2190477351252249</string>
+
+    <!--<string name="api_key">AIzaSyBFr5SuJjinlH3cAu6u-D5q7PahnrCuqNQ</string>-->
+    <string name="api_key">AIzaSyBowepAtPUQ-nOWmdWOxr19eg0Xr4P1Uw4</string>
+</resources>

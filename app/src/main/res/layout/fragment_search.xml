@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/dimen_1x"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_1x"
+        android:layout_marginRight="@dimen/dimen_1x"
+        android:background="@drawable/bg_input_key_search_radius">
+
+        <EditText
+            android:id="@+id/edt_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_3x"
+            android:layout_marginRight="@dimen/dimen_1x"
+            android:layout_toLeftOf="@+id/divider_search"
+            android:background="@color/transparent"
+            android:hint="@string/enter_key_word"
+            android:padding="@dimen/dimen_1x"
+            android:textColorHint="@color/white_transparent_50"
+            android:textColor="@color/white"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_xnormal" />
+
+        <View
+            android:id="@+id/divider_search"
+            android:layout_toLeftOf="@+id/img_search"
+            android:background="@color/white"
+            android:layout_width="1px"
+            android:layout_centerVertical="true"
+            android:layout_height="@dimen/dimen_2x"/>
+
+        <ImageView
+            android:paddingLeft="@dimen/dimen_2x"
+            android:id="@+id/img_search"
+            android:paddingTop="@dimen/dimen_05x"
+            android:paddingBottom="@dimen/dimen_05x"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_5x"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/dimen_2x"
+            android:tint="@color/white"
+            android:background="@drawable/bg_button_search"
+            android:src="@drawable/ic_btn_search" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/root_tool_support"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_1x"
+        android:layout_marginRight="@dimen/dimen_1x"
+        android:layout_marginTop="@dimen/dimen_x1x"
+        android:background="@drawable/bg_tool_function_search"
+        android:padding="@dimen/dimen_x1x"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_quantity_items"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text=""
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_size_normal" />
+
+        <ImageView
+            android:id="@+id/img_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/img_list"
+            android:src="@drawable/ico_grid" />
+
+        <ImageView
+            android:id="@+id/img_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_1x"
+            android:layout_toLeftOf="@+id/tv_all_items"
+            app:srcCompat="@drawable/ic_list" />
+
+        <TextView
+            android:id="@+id/tv_all_items"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_2x"
+            android:text="@string/all_items"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_normal" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

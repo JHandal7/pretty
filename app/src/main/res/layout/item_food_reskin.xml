@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.suusoft.restaurantuser.main.listFoods.ItemFoodVM" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_margin="@dimen/dimen_1x"
+        android:layout_width="match_parent"
+        android:translationZ="@dimen/dimen_05x"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_margin="@dimen/dimen_05x"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{viewModel::onItemClicked}"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:background="?attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_food"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="@dimen/dimen_1x"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:scaleType="centerCrop"
+                    app:url="@{viewModel.image}" />
+
+                <!--android:visibility="@{viewModel.isShowImage}"-->
+                <LinearLayout
+                    android:layout_toRightOf="@+id/img_food"
+                    android:layout_marginBottom="@dimen/dimen_1x"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_2x"
+                    android:orientation="vertical"
+                    android:id="@+id/linearLayout">
+
+                    <RelativeLayout
+                        android:layout_marginRight="@dimen/dimen_1x"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginRight="@dimen/dimen_1x"
+                            android:layout_marginTop="@dimen/dimen_1x"
+                            android:layout_toLeftOf="@+id/root_icon"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="marquee"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:singleLine="true"
+                                android:textStyle="bold"
+                                android:text="@{viewModel.name}"
+                                android:textColor="@color/textColorSecondary"
+                                android:textSize="@dimen/text_size_xnormal" />
+
+                            <TextView
+                                android:id="@+id/tv_description"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ll_root"
+                                android:maxLines="3"
+                                android:text="@{viewModel.description}"
+                                android:textColor="@color/textColorSecondary"
+                                android:textSize="@dimen/text_size_small" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="marquee"
+                                android:gravity="right"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:singleLine="true"
+                                android:text="@{viewModel.price}"
+                                android:textColor="@color/color_red_bold"
+                                android:textSize="@dimen/text_size_xnormal" />
+
+                            <LinearLayout
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="@dimen/dimen_05x"
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dimen_4x">
+
+                                <ImageView
+                                    android:visibility="@{viewModel.isSelected ?View.GONE  :View.VISIBLE }"
+                                    android:src="@drawable/ic_add_to_cart"
+                                    android:layout_width="wrap_content"
+                                    android:background="@drawable/bg_button_add_quantily"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_height="@dimen/dimen_4x" />
+
+                                <LinearLayout
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="@{viewModel.isSelected ? View.VISIBLE : View.GONE}">
+
+                                    <ImageView
+                                        android:id="@+id/img_sub"
+                                        android:layout_marginRight="@dimen/dimen_1x"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:padding="@dimen/dimen_05x"
+                                        android:background="@drawable/bg_button_add_quantily"
+                                        android:layout_gravity="center_vertical"
+                                        android:onClick="@{viewModel::onSubFood}"
+                                        app:srcCompat="@drawable/ic_sub_food"
+                                        android:tint="@color/colorPrimary" />
+
+                                    <android.support.v7.widget.CardView
+                                        android:layout_centerInParent="true"
+                                        android:translationZ="@dimen/dimen_05x"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_toLeftOf="@+id/img_add"
+                                            android:layout_toRightOf="@+id/img_sub"
+                                            android:gravity="center"
+                                            android:padding="@dimen/dimen_05x"
+                                            android:text="@{viewModel.quantity}"
+                                            android:textColor="@color/textColorPrimary"
+                                            android:textSize="@dimen/text_size_normal" />
+
+                                    </android.support.v7.widget.CardView>
+
+                                    <ImageView
+                                        android:layout_marginLeft="@dimen/dimen_1x"
+                                        android:id="@+id/img_add"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_gravity="center_vertical"
+                                        android:padding="@dimen/dimen_05x"
+                                        android:background="@drawable/bg_button_add_quantily"
+                                        android:onClick="@{viewModel::onAddFood}"
+                                        app:srcCompat="@drawable/ic_add_food"
+                                        android:tint="@color/colorPrimary" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <!--<LinearLayout
+                                android:layout_marginTop="@dimen/dimen_1x"
+                                android:visibility="@{viewModel.isSelected ? View.VISIBLE : View.GONE}"
+                                android:layout_marginRight="@dimen/dimen_1x"
+                                android:id="@+id/ll_btn"
+                                android:layout_alignParentRight="true"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_marginBottom="@dimen/dimen_1x"
+                                    android:id="@+id/img_add"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_gravity="center_horizontal"
+                                    android:onClick="@{viewModel::onSubFood}"
+                                    android:padding="@dimen/dimen_05x"
+                                    app:srcCompat="@drawable/ic_sub_food"
+                                    android:tint="@color/color_red_bold" />
+
+
+
+                                <android.support.v7.widget.CardView
+                                    android:translationZ="@dimen/dimen_05x"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toLeftOf="@+id/img_add"
+                                        android:layout_toRightOf="@+id/img_sub"
+                                        android:gravity="center"
+                                        android:paddingTop="@dimen/dimen_05x"
+                                        android:paddingBottom="@dimen/dimen_05x"
+                                        android:paddingLeft="@dimen/dimen_1x"
+                                        android:paddingRight="@dimen/dimen_1x"
+                                        android:text="@{viewModel.quantity}"
+                                        android:textColor="@color/textColorPrimary"
+                                        android:textSize="@dimen/text_size_normal" />
+                                </android.support.v7.widget.CardView>
+
+                                <ImageView
+                                    android:layout_marginTop="@dimen/dimen_1x"
+                                    android:id="@+id/img_sub"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center_horizontal"
+                                    android:onClick="@{viewModel::onAddFood}"
+                                    android:padding="@dimen/dimen_05x"
+                                    app:srcCompat="@drawable/ic_add_food"
+                                    android:tint="@color/color_red_bold" />
+
+
+                            </LinearLayout>-->
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/root_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_margin="@dimen/dimen_05x"
+                                android:visibility="@{viewModel.isPopular()}"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_popular" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/dimen_05x"
+                                android:src="@drawable/ic_sale" />
+
+                            <!--<ImageView
+                                android:visibility="@{viewModel.isSelected ?View.GONE  :View.VISIBLE }"
+                                android:layout_width="wrap_content"
+                                android:layout_margin="@dimen/dimen_05x"
+                                android:src="@drawable/ic_add_to_cart"
+                                android:layout_height="wrap_content" />-->
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <!--
+                               <com.moza.restaurantuser.widgets.textview.TextViewLatoMedium
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/bg_pressed_color_red"
+                                    android:gravity="center"
+                                    android:padding="@dimen/dimen_1x"
+                                    android:layout_marginRight="@dimen/dimen_05x"
+                                    android:text="@string/add_to_cart"
+                                    android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                    android:textSize="@dimen/text_size_small" />
+                                <RelativeLayout
+                                    android:layout_marginRight="@dimen/dimen_05x"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="@{viewModel.isSelected ? View.VISIBLE : View.GONE}">
+
+
+                                </RelativeLayout>-->
+
+                    <View
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@+id/img_food"
+                        android:layout_marginBottom="@dimen/dimen_x1x"
+                        android:layout_marginTop="@dimen/dimen_2x"
+                        android:background="@color/dividerColor" />
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>

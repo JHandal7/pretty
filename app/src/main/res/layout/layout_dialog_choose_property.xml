@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dimen_2x"
+    android:layout_marginRight="@dimen/dimen_2x"
+    android:background="@drawable/bg_white_radius"
+    android:orientation="vertical">
+
+    <com.suusoft.restaurantuser.widgets.textview.TextViewLatoHeavy
+        android:id="@+id/tv_name_food"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_header_red_bold_dialog_radius"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:padding="@dimen/dimen_1x"
+        android:singleLine="true"
+        android:text="@string/property"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_xlarge" />
+
+    <ListView
+        android:id="@+id/lv_properties"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_2x"
+        android:layout_marginTop="@dimen/dimen_2x"
+        android:background="@color/white"
+        android:choiceMode="singleChoice"
+        android:divider="@null" />
+</LinearLayout>

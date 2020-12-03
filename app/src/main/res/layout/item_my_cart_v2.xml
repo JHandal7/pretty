@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.suusoft.restaurantuser.main.mycart.ItemMyCartVM" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{viewModel::onItemClicked}">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_1x"
+            android:layout_marginLeft="@dimen/dimen_x1x"
+            android:layout_marginRight="@dimen/dimen_x1x"
+            android:layout_marginTop="@dimen/dimen_1x"
+            android:background="@drawable/bg_border_grey_radius_white">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_2x"
+                android:layout_toLeftOf="@+id/ll_root_price"
+                android:orientation="vertical">
+
+                <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="@{viewModel.name}"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/text_size_large" />
+
+                <com.suusoft.restaurantuser.widgets.textview.TextViewLatoThin
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="@{viewModel.version}"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/text_size_normal"
+                    android:visibility="@{viewModel.isShowVersion()}"
+                    app:setSelected="@{viewModel.selected}" />
+
+                <com.suusoft.restaurantuser.widgets.textview.TextViewLatoThin
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="@{viewModel.options}"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/text_size_normal"
+                    android:visibility="@{viewModel.isShowOption}"
+                    app:setSelected="@{viewModel.selected}" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_root_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dimen_4x"
+                android:layout_toLeftOf="@+id/ll_root_options"
+                android:orientation="vertical">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/ll_root_price_orginal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="@dimen/text_size_large" />
+
+                        <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{viewModel.price}"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="@dimen/text_size_large" />
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/textColorPrimary"
+                        android:visibility="@{viewModel.isVisiblePriceSale}"
+                        app:layout_constraintBottom_toBottomOf="@+id/ll_root_price_orginal"
+                        app:layout_constraintTop_toTopOf="@+id/ll_root_price_orginal" />
+                </android.support.constraint.ConstraintLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="@{viewModel.isVisiblePriceSale}">
+
+                    <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$"
+                        android:textColor="@color/textColorSecondary"
+                        android:textSize="@dimen/text_size_large" />
+
+                    <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{viewModel.priceSale}"
+                        android:textColor="@color/textColorSecondary"
+                        android:textSize="@dimen/text_size_large" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_root_options"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{viewModel::addItem}"
+                    android:src="@drawable/ic_add_item_cart" />
+
+                <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_border_grey"
+                    android:gravity="center"
+                    android:text="@{viewModel.quantity}"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{viewModel::subItem}"
+                    android:src="@drawable/ic_sub_item_cart" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_1x"
+            android:layout_marginTop="@dimen/dimen_05x"
+            android:onClick="@{viewModel::removeItem}"
+            android:src="@drawable/ic_remove_item_cart" />
+    </RelativeLayout>
+</layout>

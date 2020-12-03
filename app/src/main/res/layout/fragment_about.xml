@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout   xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.suusoft.restaurantuser.main.about.AboutVM"/>
+    </data>
+
+
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_light"
+    android:padding="@dimen/dimen_2x">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/dimen_1x"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_about"/>
+
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingBottom="@dimen/dimen_1x"
+                android:paddingTop="@dimen/dimen_1x"
+                android:text="@string/about_title"
+                android:textColor="@color/grey_hard"
+                android:textSize="@dimen/text_size_xnormal" />
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewRegular
+                android:layout_width="60dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/red" />
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen_2x"
+                android:text="@string/about_content1"
+                android:textColor="@color/grey_bold"
+                android:textSize="@dimen/text_size_small" />
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/dimen_1x"
+                android:text="@string/about_content2"
+                android:textColor="@color/grey_bold"
+                android:textSize="@dimen/text_size_small" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_2x"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <com.suusoft.restaurantuser.widgets.textview.TextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="@dimen/dimen_1x"
+                    android:text="@string/follow_us"
+                    android:textColor="@color/grey_hard"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <ImageView
+                    android:id="@+id/img_fb"
+                    android:onClick="@{viewModel::onClickFb}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_1x"
+                    android:layout_marginRight="@dimen/dimen_1x"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/ic_face" />
+
+                <ImageView
+                    android:onClick="@{viewModel::onClickGg}"
+
+                    android:id="@+id/img_gg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_1x"
+                    android:layout_marginRight="@dimen/dimen_1x"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/ic_google_red" />
+
+
+            </LinearLayout>
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewRegular
+                android:id="@+id/tv_link"
+                android:onClick="@{viewModel::onClickWeb}"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:autoLink="web"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/dimen_1x"
+                android:text="@string/about_link"
+                android:textColor="@color/grey_hard"
+                android:textSize="@dimen/text_size_normal" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

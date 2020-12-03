@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.suusoft.restaurantuser.main.category.ItemCategoryVM" />
+    </data>
+
+    <LinearLayout
+        android:background="?attr/selectableItemBackground"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_image_category"
+        android:layout_margin="@dimen/dimen_05x"
+        android:onClick="@{viewModel::onItemClicked}">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/colorPrimary"
+                android:id="@+id/img_food"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/dimen_2x"
+                android:layout_marginLeft="@dimen/dimen_2x"
+                android:layout_marginRight="@dimen/dimen_2x"
+                android:layout_marginBottom="@dimen/dimen_1x"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:url="@{viewModel.image}" />
+
+        <com.suusoft.restaurantuser.widgets.textview.TextViewLatoLight
+            android:id="@+id/tv_name_food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_food"
+            android:layout_marginBottom="@dimen/dimen_2x"
+            android:layout_marginLeft="@dimen/dimen_2x"
+            android:layout_marginRight="@dimen/dimen_2x"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@{viewModel.nameCategory}"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_xnormal" />
+
+            <TextView
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/tv_quantity_foods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_2x"
+                android:layout_marginLeft="@dimen/dimen_1x"
+                android:layout_marginRight="@dimen/dimen_1x"
+                android:text="2"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/text_size_small" />
+
+
+        <View
+            android:visibility="gone"
+            android:background="@drawable/bg_gradien_item_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="7dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginRight="13dp"
+            android:background="@drawable/bg_white_radius_quantity_item"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/dimen_05x"
+            android:paddingLeft="@dimen/dimen_1x"
+            android:paddingRight="@dimen/dimen_1x"
+            android:paddingTop="@dimen/dimen_05x">
+
+
+            <ImageView
+                android:id="@+id/img_items"
+                android:tint="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_product"
+                android:visibility="visible" />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

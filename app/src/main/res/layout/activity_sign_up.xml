@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dimen_2x"
+        android:layout_above="@+id/ll_root"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_4x"
+            android:layout_marginRight="@dimen/dimen_4x"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dimen_6x">
+
+            <include layout="@layout/layout_logo_group_primary"/>
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewLatoHeavy
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_1x"
+                android:text="Source Code"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_size_large" />
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4x"
+                android:text="@string/email_"
+                android:textAllCaps="true"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_size_xnormal" />
+
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:maxLength="50"
+                android:singleLine="true"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/text_size_xnormal"
+                android:theme="@style/EditTextRed" />
+
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_1x"
+                android:text="@string/password"
+                android:textAllCaps="true"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_size_xnormal" />
+
+            <EditText
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:maxLength="50"
+                android:singleLine="true"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/text_size_xnormal"
+                android:theme="@style/EditTextRed" />
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_1x"
+                android:text="@string/password_confirm"
+                android:textAllCaps="true"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_size_xnormal" />
+
+            <EditText
+                android:id="@+id/edt_password_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:maxLength="50"
+                android:singleLine="true"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/text_size_xnormal"
+                android:theme="@style/EditTextRed" />
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_1x"
+                android:text="@string/full_name"
+                android:textAllCaps="true"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_size_xnormal" />
+
+
+            <EditText
+                android:id="@+id/edt_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:maxLength="100"
+                android:singleLine="true"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/text_size_xnormal"
+                android:theme="@style/EditTextRed" />
+
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_1x"
+                android:text="@string/address_"
+                android:textAllCaps="true"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_size_xnormal" />
+
+            <EditText
+                android:id="@+id/edt_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:maxLength="100"
+                android:singleLine="true"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/text_size_xnormal"
+                android:theme="@style/EditTextRed" />
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_1x"
+                android:text="@string/phone"
+                android:textAllCaps="true"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_size_xnormal" />
+
+            <EditText
+                android:id="@+id/edt_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:imeOptions="actionDone"
+                android:inputType="phone"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/text_size_xnormal"
+                android:theme="@style/EditTextRed" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dimen_4x"
+        android:orientation="vertical">
+
+        <com.suusoft.restaurantuser.widgets.textview.TextViewLatoHeavy
+            android:id="@+id/tv_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="@dimen/dimen_4x"
+            android:layout_marginRight="@dimen/dimen_4x"
+            android:background="@drawable/bg_pressed_border_red"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dimen_x1x"
+            android:paddingTop="@dimen/dimen_x1x"
+            android:text="@string/complete"
+            android:textAllCaps="true"
+            android:textColor="@color/red"
+            android:textSize="@dimen/text_size_normal" />
+
+        <com.suusoft.restaurantuser.widgets.textview.TextViewItalic
+            android:id="@+id/tv_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dimen_4x"
+            android:layout_marginTop="@dimen/dimen_2x"
+            android:gravity="center"
+            android:text="@string/account_have_aready"
+            android:textColor="@color/red"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="italic" />
+    </LinearLayout>
+</RelativeLayout>

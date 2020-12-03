@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.suusoft.restaurantuser.main.user.LoginVM" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:fillViewport="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_white">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/rlt_root_function"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_above="@+id/ll_input"
+                        android:layout_marginTop="@dimen/dimen_3x"
+                        android:id="@+id/ll_logo"
+                        android:layout_alignParentTop="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <RelativeLayout
+                            android:layout_above="@id/lo_center"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <include
+                                android:layout_above="@id/lo_center"
+                                android:layout_centerInParent="true"
+                                layout="@layout/layout_logo_group_primary"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content" />
+
+                        </RelativeLayout>
+
+
+
+
+                        <LinearLayout
+                            android:id="@+id/lo_center"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="@dimen/dimen_2x"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:textSize="@dimen/text_size_large"
+                                android:text="@string/login_via"
+                                android:textColor="@color/colorPrimary"
+                                android:gravity="center"
+                                android:padding="@dimen/dimen_2x"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"/>
+
+                            <com.suusoft.restaurantuser.widgets.textview.TextViewLatoHeavy
+                                android:visibility="visible"
+                                android:layout_marginTop="@dimen/dimen_2x"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/bg_press_radius_blue_facebook"
+                                android:gravity="center"
+                                android:onClick="@{viewModel::onClickLoginFb}"
+                                android:padding="@dimen/dimen_2x"
+                                android:text="@string/login_facebook"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_normal" />
+
+                            <com.suusoft.restaurantuser.widgets.textview.TextViewLatoHeavy
+                                android:layout_marginTop="@dimen/dimen_4x"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/bg_button_google"
+                                android:gravity="center"
+                                android:onClick="@{viewModel::onClickLoginGg}"
+                                android:padding="@dimen/dimen_2x"
+                                android:text="@string/login_google"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_normal" />
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:visibility="visible"
+                        android:layout_marginTop="@dimen/dimen_2x"
+                        android:layout_marginBottom="@dimen/dimen_2x"
+                        android:layout_centerInParent="true"
+                        android:id="@+id/ll_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_4x"
+                        android:layout_marginRight="@dimen/dimen_4x"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_centerInParent="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/user_name"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/text_size_xnormal" />
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:imeOptions="actionNext"
+                                android:inputType="textEmailAddress"
+                                android:maxLength="100"
+                                android:singleLine="true"
+                                android:text="@={viewModel.userName}"
+                                android:textColor="@color/textColorPrimary"
+                                android:textSize="@dimen/text_size_xnormal"
+                                android:theme="@style/EditTextRed" />
+
+                            <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_1x"
+                                android:text="@string/password"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/text_size_xnormal" />
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:imeOptions="actionDone"
+                                android:inputType="textPassword"
+                                android:maxLength="50"
+                                android:singleLine="true"
+                                android:text="@={viewModel.password}"
+                                android:textColor="@color/textColorPrimary"
+                                android:textSize="@dimen/text_size_xnormal"
+                                android:theme="@style/EditTextRed" />
+
+
+                            <com.suusoft.restaurantuser.widgets.textview.TextViewItalic
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="right"
+                                android:layout_marginBottom="@dimen/dimen_x1x"
+                                android:layout_marginRight="@dimen/dimen_05x"
+                                android:onClick="@{viewModel::onClickLoginForgot}"
+                                android:text="@string/forgot_password"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/text_size_normal"
+                                android:textStyle="italic" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:visibility="visible"
+                        android:layout_marginLeft="@dimen/dimen_4x"
+                        android:layout_marginRight="@dimen/dimen_4x"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.suusoft.restaurantuser.widgets.textview.TextViewLatoHeavy
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_2x"
+                            android:background="@drawable/bg_pressed_border_red"
+                            android:gravity="center"
+                            android:visibility="visible"
+                            android:onClick="@{viewModel::onClickLogin}"
+                            android:padding="@dimen/dimen_x1x"
+                            android:text="@string/login"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/text_size_normal" />
+
+                        <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_1x"
+                            android:layout_marginTop="@dimen/dimen_1x"
+                            android:gravity="center"
+                            android:visibility="visible"
+                            android:text="@string/or"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/text_size_normal" />
+
+
+                        <com.suusoft.restaurantuser.widgets.textview.TextViewItalic
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="@dimen/dimen_1x"
+                            android:gravity="center"
+                            android:onClick="@{viewModel::onClickSignUp}"
+                            android:text="@string/have_not_yet_account"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/text_size_normal"
+                            android:textStyle="italic" />
+                    </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+    </RelativeLayout>
+</layout>

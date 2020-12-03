@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.suusoft.restaurantuser.main.home.ItemProductVM" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/root_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:onClick="@{viewModel::onItemClicked}"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_large_icon"
+            android:layout_margin="@dimen/dimen_2x">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imv_avartar"
+                android:layout_width="@dimen/dimen_large_icon"
+                android:layout_height="match_parent"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="0dp"
+                app:url="@{viewModel.image}" />
+
+
+            <RelativeLayout
+                android:id="@+id/rlt_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dimen_2x"
+                android:layout_marginRight="@dimen/dimen_2x"
+                android:layout_toEndOf="@+id/imv_avartar"
+                android:layout_toRightOf="@+id/imv_avartar"
+                android:paddingTop="@dimen/dimen_1x">
+
+                <com.suusoft.restaurantuser.widgets.textview.TextViewBold
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="@{viewModel.title}"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/text_size_xnormal" />
+
+                <com.suusoft.restaurantuser.widgets.textview.TextViewRegular
+                    android:id="@+id/tv_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_title"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/dimen_1x"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="@{viewModel.type}"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/text_size_normal" />
+
+            </RelativeLayout>
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewBold
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@{viewModel.budget}"
+                tool:text="100$"
+                android:textColor="@color/yellowDark"
+                android:textSize="@dimen/text_size_large" />
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewRegular
+                android:id="@+id/lbl_status"
+                android:layout_width="@dimen/dimen_large_icon"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_price"
+                android:layout_marginTop="@dimen/dimen_05x"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bg_pressed_primary"
+                android:gravity="center"
+                android:onClick="@{viewModel::onClickAction}"
+                android:paddingBottom="@dimen/dimen_1x"
+                android:paddingTop="@dimen/dimen_1x"
+                android:text="Action"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/dividerColor" />
+    </LinearLayout>
+</layout>

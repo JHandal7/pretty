@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "888049999981",
+    "firebase_url": "https://product-19014.firebaseio.com",
+    "project_id": "product-19014",
+    "storage_bucket": "product-19014.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:888049999981:android:310e8b0eeb43d3da",
+        "android_client_info": {
+          "package_name": "com.suusoft.restaurantuser"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "888049999981-g7q29psph31g6ufj0ko4h54ficmsr4kc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.suusoft.restaurantuser",
+            "certificate_hash": "029a3c633db41ea6b4816f585f6c2efa60ba3ea5"
+          }
+        },
+        {
+          "client_id": "888049999981-urkh568dpsmsu1pub0gumi19c6q2vbre.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.suusoft.restaurantuser",
+            "certificate_hash": "1809d13919b2a119286be63c6a51b229d36c56b9"
+          }
+        },
+        {
+          "client_id": "888049999981-k1t6nqj0vp8d4eq2v7sq3mdlb3usv9ol.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBowepAtPUQ-nOWmdWOxr19eg0Xr4P1Uw4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "888049999981-k1t6nqj0vp8d4eq2v7sq3mdlb3usv9ol.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

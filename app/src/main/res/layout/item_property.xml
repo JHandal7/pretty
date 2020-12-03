@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <CheckBox
+        android:id="@+id/ckb_property"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dimen_1x"
+        android:layout_weight="70"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dimen_1x"
+        android:textSize="@dimen/text_size_normal" />
+
+    <com.suusoft.restaurantuser.widgets.textview.TextViewLatoMedium
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_toLeftOf="@+id/tv_price"
+        android:layout_toRightOf="@+id/ckb_property"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:padding="@dimen/dimen_1x"
+        android:singleLine="true"
+        android:text="name"
+        android:textSize="@dimen/text_size_normal" />
+
+    <com.suusoft.restaurantuser.widgets.textview.TextViewLatoMedium
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dimen_1x"
+        android:layout_marginRight="@dimen/dimen_1x"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:padding="@dimen/dimen_1x"
+        android:singleLine="true"
+        android:text="100.100"
+        android:textSize="@dimen/text_size_normal" />
+
+</RelativeLayout>

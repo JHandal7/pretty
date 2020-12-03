@@ -1,0 +1,77 @@
+<resources>
+    <!-- Default screen margins, padding, per the Android Design guidelines. -->
+    <dimen name="dimen_05x">4dp</dimen>
+    <dimen name="dimen_1x">8dp</dimen>
+    <dimen name="dimen_x1x">12dp</dimen>
+    <dimen name="dimen_2x">16dp</dimen>
+    <dimen name="dimen_x2x">20dp</dimen>
+    <dimen name="dimen_3x">24dp</dimen>
+    <dimen name="dimen_x3x">28dp</dimen>
+    <dimen name="dimen_4x">32dp</dimen>
+    <dimen name="dimen_x4x">36dp</dimen>
+    <dimen name="dimen_5x">40dp</dimen>
+    <dimen name="dimen_x5x">44dp</dimen>
+    <dimen name="dimen_6x">48dp</dimen>
+    <dimen name="dimen_x6x">52dp</dimen>
+    <dimen name="dimen_7x">56dp</dimen>
+    <dimen name="dimen_x7x">60dp</dimen>
+    <dimen name="dimen_8x">64dp</dimen>
+    <dimen name="dimen_x8x">68dp</dimen>
+    <dimen name="dimen_9x">72dp</dimen>
+    <dimen name="dimen_x9x">76dp</dimen>
+    <dimen name="dimen_10x">80dp</dimen>
+
+    <dimen name="margin_top_content">96dp</dimen>
+    <dimen name="margin_top_logo">80dp</dimen>
+
+    <!-- Text size -->
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_normal">14sp</dimen>
+    <dimen name="text_size_xnormal">16sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_xlarge">20sp</dimen>
+    <dimen name="text_size_xxlarge">22sp</dimen>
+    <dimen name="text_size_xxxlarge">24sp</dimen>
+    <dimen name="text_size_huge">26sp</dimen>
+    <dimen name="text_size_xhuge">28sp</dimen>
+    <dimen name="text_size_xxhuge">30sp</dimen>
+
+    <!-- home screen -->
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="nav_header_height">160dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="dimen_large_icon">70dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+    <!-- screen -->
+    <dimen name="height_content_comment">160dp</dimen>
+    <dimen name="dimen_button_menu">45dp</dimen>
+    <dimen name="dimen_button_category">40dp</dimen>
+    <dimen name="dimen_image_category">180dp</dimen>
+    <dimen name="dimen_button_back">56dp</dimen>
+    <dimen name="dimen_menu_right">240dp</dimen>
+    <dimen name="dimen_img_food">120dp</dimen>
+    <dimen name="dimen_image_food">110dp</dimen>
+    <dimen name="recycler_section_header_height">50dp</dimen>
+    <dimen name="dimen_logo_changepass">96dp</dimen>
+    <dimen name="max_height_dialog_time_delivery">300dp</dimen>
+    <dimen name="height_dialog">400dp</dimen>
+    <dimen name="dimen_image_promotion">200dp</dimen>
+    <dimen name="dimen_height_map">150dp</dimen>
+
+    <dimen name="min_width_dialog">300dp</dimen>
+    <dimen name="dimen_avatar">112dp</dimen>
+    <dimen name="dimen_layout_header">160dp</dimen>
+    <dimen name="dimen_bottom_header">80dp</dimen>
+    <dimen name="dimen_avatar_comment">56dp</dimen>
+    <dimen name="dimen_number_order">95dp</dimen>
+    <dimen name="radius">4dp</dimen>
+    <dimen name="dimen_notifi">5dp</dimen>
+</resources>

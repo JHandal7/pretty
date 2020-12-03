@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.suusoft.restaurantuser.main.feedback.FeedBackVM"/>
+    </data>
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_light">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_4x">
+
+
+                <EditText
+                    android:layout_marginTop="@dimen/dimen_2x"
+
+                    android:id="@+id/txtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/input_your_name"
+                    android:imeOptions="actionNext"
+                    android:background="@color/white"
+
+                    android:inputType="textCapWords"
+                    android:lines="1"
+                    android:padding="@dimen/dimen_2x"
+                    android:text="@={viewModel.name}"
+                    android:textColor="@color/grey_hard"
+                    android:textSize="@dimen/text_size_normal" />
+
+
+                <EditText
+                    android:id="@+id/txtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/dimen_3x"
+
+                    android:hint="@string/input_your_email"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:lines="1"
+                    android:padding="@dimen/dimen_2x"
+                    android:text="@={viewModel.email}"
+                    android:textColor="@color/grey_hard"
+                    android:textSize="@dimen/text_size_normal" />
+
+
+                <EditText
+                    android:id="@+id/txtSubject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/dimen_3x"
+                    android:hint="@string/input_subject"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences"
+                    android:lines="1"
+
+                    android:padding="@dimen/dimen_2x"
+                    android:text="@={viewModel.subject}"
+                    android:textColor="@color/grey_hard"
+                    android:textSize="@dimen/text_size_normal" />
+
+
+                <EditText
+                    android:id="@+id/txtContent"
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/dimen_3x"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_content_comment"
+                    android:gravity="top|left"
+                    android:hint="@string/input_your_feedback"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine"
+                    android:lines="6"
+                    android:padding="@dimen/dimen_2x"
+                    android:singleLine="false"
+                    android:text="@={viewModel.content}"
+                    android:textColor="@color/grey_hard"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <com.suusoft.restaurantuser.widgets.textview.TextViewBold
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_3x"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_button_primary"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_x1x"
+                    android:onClick="@{viewModel::onClickSendFeedback}"
+                    android:text="@string/send_feedback"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_normal" />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+
+</layout>

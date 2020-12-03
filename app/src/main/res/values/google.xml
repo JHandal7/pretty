@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="signed_in_fmt">Signed in</string>
+    <string name="signed_out">Signed out</string>
+
+</resources>

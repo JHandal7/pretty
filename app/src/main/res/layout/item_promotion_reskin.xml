@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.suusoft.restaurantuser.main.promotion.ItemPromotionVM" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_05x"
+        android:background="@color/transparent"
+        android:onClick="@{viewModel::onItemClicked}">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/root"
+            android:background="@drawable/bg_radius_white_item_promotion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_gravity="top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:padding="2px"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_image_promotion">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:sriv_right_top_corner_radius="@dimen/dimen_1x"
+                        app:sriv_left_top_corner_radius="@dimen/dimen_1x"
+                        android:scaleType="fitXY"
+                        app:url="@{viewModel.image}" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/grey_transparent_40" />
+
+                    <com.suusoft.restaurantuser.widgets.textview.TextViewLatoLight
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="@{viewModel.name}"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_xxxlarge" />
+
+                    <com.suusoft.restaurantuser.widgets.textview.TextViewLatoHeavy
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="@dimen/dimen_1x"
+                        android:maxLines="3"
+                        android:visibility="gone"
+                        android:text="@{viewModel.promoCode}"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_normal" />
+                </RelativeLayout>
+
+                <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_x1x"
+                    android:layout_marginLeft="@dimen/dimen_1x"
+                    android:layout_marginRight="@dimen/dimen_1x"
+                    android:layout_marginTop="@dimen/dimen_x1x"
+                    android:maxLines="3"
+                    android:text="@{viewModel.description}"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/text_size_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_marginLeft="@dimen/dimen_1x"
+                android:layout_marginRight="@dimen/dimen_1x"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+
+            <LinearLayout
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/root"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dimen_1x"
+                android:paddingLeft="@dimen/dimen_2x"
+                android:paddingRight="@dimen/dimen_2x"
+                android:paddingTop="@dimen/dimen_1x">
+
+                <ImageView
+                    android:id="@+id/img_favourite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_1x"
+                    android:src="@{viewModel.icon}"/>
+
+                <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dimen_1x"
+                    android:text="@{viewModel.favourite}"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/text_size_small" />
+
+                <ImageView
+                    android:id="@+id/img_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_1x"
+                    android:src="@drawable/ico_comment"
+                    />
+
+                <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dimen_1x"
+                    android:text="@{viewModel.numComment}"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/text_size_small" />
+
+                <ImageView
+                    android:id="@+id/img_time_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_1x"
+                    android:src="@drawable/ic_time"/>
+
+                <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dimen_1x"
+                    android:layout_marginRight="@dimen/dimen_2x"
+                    android:text="@{viewModel.time}"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/text_size_small" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</layout>

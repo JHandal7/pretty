@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.suusoft.restaurantuser.main.myaccount.mydetail.MyDetailsVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_background"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_x1x"
+            android:background="@drawable/bg_radius_top_white"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_avatar"
+                android:layout_width="@dimen/dimen_avatar"
+                android:layout_height="@dimen/dimen_avatar"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/dimen_2x"
+                android:layout_marginTop="@dimen/dimen_2x"
+                android:onClick="@{viewModel::choseImage}"
+                android:src="@drawable/avatar_defaut"
+                app:url="@{viewModel.bitmap}" />
+
+            <ImageView
+                android:id="@+id/img_ic_option"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dimen_1x"
+                android:layout_marginTop="@dimen/dimen_1x"
+                android:onClick="@{viewModel::showDialogOption}"
+                android:src="@drawable/ic_option" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_x1x"
+            android:layout_marginTop="@dimen/dimen_x1x"
+            android:background="@drawable/bg_white_radius"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewLatoMedium
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_border_grey_radius_top"
+                android:padding="@dimen/dimen_x1x"
+                android:text="@string/delivery_detail"
+                android:textAllCaps="true"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_size_normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_2x"
+                    android:orientation="horizontal">
+
+                    <com.suusoft.restaurantuser.widgets.textview.TextViewLatoMedium
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/name"
+                        android:textColor="@color/textColorSecondary"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <EditText
+                        android:id="@+id/edt_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_1x"
+                        android:background="@color/white"
+                        android:enabled="@{viewModel.enable}"
+                        android:gravity="right|center_vertical"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords"
+                        android:padding="@dimen/dimen_x1x"
+                        android:singleLine="true"
+                        android:text="@{viewModel.firstName}"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/text_size_normal" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/dimen_1x"
+                    android:layout_marginRight="@dimen/dimen_1x"
+                    android:background="@color/dividerColor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_2x"
+                    android:orientation="horizontal">
+
+                    <com.suusoft.restaurantuser.widgets.textview.TextViewLatoMedium
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/address_"
+                        android:textColor="@color/textColorSecondary"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <EditText
+                        android:id="@+id/edt_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_1x"
+                        android:background="@color/white"
+                        android:enabled="@{viewModel.enable}"
+                        android:gravity="right|center_vertical"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords"
+                        android:padding="@dimen/dimen_x1x"
+                        android:singleLine="true"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/text_size_normal" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/dimen_1x"
+                    android:layout_marginRight="@dimen/dimen_1x"
+                    android:background="@color/dividerColor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_2x"
+                    android:orientation="horizontal">
+
+                    <com.suusoft.restaurantuser.widgets.textview.TextViewLatoMedium
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/email_"
+                        android:textColor="@color/textColorSecondary"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <EditText
+                        android:id="@+id/edt_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_1x"
+                        android:background="@color/white"
+                        android:enabled="@{viewModel.enable}"
+                        android:text="@{viewModel.email}"
+                        android:gravity="right|center_vertical"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:padding="@dimen/dimen_x1x"
+                        android:singleLine="true"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/text_size_normal" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/dimen_1x"
+                    android:layout_marginRight="@dimen/dimen_1x"
+                    android:background="@color/dividerColor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_2x"
+                    android:orientation="horizontal">
+
+                    <com.suusoft.restaurantuser.widgets.textview.TextViewLatoMedium
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/phone"
+                        android:textColor="@color/textColorSecondary"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <EditText
+                        android:id="@+id/edt_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_1x"
+                        android:background="@color/white"
+                        android:enabled="@{viewModel.enable}"
+                        android:gravity="right|center_vertical"
+                        android:imeOptions="actionDone"
+                        android:inputType="phone"
+                        android:padding="@dimen/dimen_x1x"
+                        android:singleLine="true"
+                        android:text="@={viewModel.phone}"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/text_size_normal" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_2x"
+            android:layout_marginRight="@dimen/dimen_2x"
+            android:layout_marginTop="@dimen/dimen_2x"
+            android:background="@drawable/bg_pressed_color_red"
+            android:gravity="center"
+            android:onClick="@{viewModel::save}"
+            android:padding="@dimen/dimen_x1x"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_large"
+            android:visibility="@{viewModel.isVisible}" />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.suusoft.restaurantuser.main.mycart.ItemMyCartVM" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_margin="@dimen/dimen_1x"
+        android:layout_width="match_parent"
+        android:translationZ="@dimen/dimen_05x"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:paddingRight="@dimen/dimen_05x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_1x"
+                android:layout_marginLeft="@dimen/dimen_x1x"
+                android:layout_marginRight="@dimen/dimen_x1x"
+                android:layout_marginTop="@dimen/dimen_1x">
+
+                <RelativeLayout
+                    android:onClick="@{viewModel::onItemClicked}"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_2x"
+                        android:layout_toLeftOf="@+id/ll_root_price"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:singleLine="true"
+                            android:textStyle="bold"
+                            android:text="@{viewModel.name}"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="@dimen/text_size_large" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:singleLine="true"
+                            android:text="@{viewModel.version}"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="@dimen/text_size_normal"
+                            android:visibility="@{viewModel.isShowVersion()}"
+                            app:setSelected="@{viewModel.selected}" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:singleLine="true"
+                            android:text="@{viewModel.options}"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="@dimen/text_size_normal"
+                            android:visibility="@{viewModel.isShowOption}"
+                            app:setSelected="@{viewModel.selected}" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_root_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dimen_4x"
+                        android:layout_toLeftOf="@+id/ll_root_options"
+                        android:orientation="vertical">
+
+                        <android.support.constraint.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/ll_root_price_orginal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:textStyle="bold"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/text_size_large" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{viewModel.price}"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/text_size_large" />
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/textColorPrimary"
+                                android:visibility="@{viewModel.isVisiblePriceSale}"
+                                app:layout_constraintBottom_toBottomOf="@+id/ll_root_price_orginal"
+                                app:layout_constraintTop_toTopOf="@+id/ll_root_price_orginal" />
+                        </android.support.constraint.ConstraintLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="@{viewModel.isVisiblePriceSale}">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="$"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/text_size_large" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{viewModel.priceSale}"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/text_size_large" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_root_options"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/dimen_1x"
+                            android:onClick="@{viewModel::addItem}"
+                            android:tint="@color/colorPrimary"
+                            android:background="@drawable/bg_button_add_quantily"
+                            app:srcCompat="@drawable/ic_add_food" />
+
+                        <android.support.v7.widget.CardView
+                            android:layout_gravity="center"
+                            android:layout_centerInParent="true"
+                            android:translationZ="@dimen/dimen_05x"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/img_add"
+                                android:layout_toRightOf="@+id/img_sub"
+                                android:gravity="center"
+                                android:padding="@dimen/dimen_05x"
+                                android:text="@{viewModel.quantity}"
+                                android:textColor="@color/textColorSecondary"
+                                android:textSize="@dimen/text_size_normal" />
+                        </android.support.v7.widget.CardView>
+
+                        <ImageView
+                            android:paddingTop="@dimen/dimen_1x"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="@{viewModel::subItem}"
+                            android:background="@drawable/bg_button_add_quantily"
+                            android:tint="@color/colorPrimary"
+                            app:srcCompat="@drawable/ic_sub_food" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_1x"
+                android:layout_marginTop="@dimen/dimen_05x"
+                android:onClick="@{viewModel::removeItem}"
+                android:tint="@color/colorPrimary"
+                android:src="@drawable/ic_remove_item_cart" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</layout>

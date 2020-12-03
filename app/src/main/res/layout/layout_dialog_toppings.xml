@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dimen_1x"
+    android:layout_marginRight="@dimen/dimen_1x"
+    android:background="@drawable/bg_white_radius"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dimen_1x">
+
+        <com.suusoft.restaurantuser.widgets.textview.TextViewLatoHeavy
+            android:id="@+id/tvHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/toppings"
+            android:background="@drawable/bg_header_red_bold_dialog_radius"
+            android:padding="@dimen/dimen_1x"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_xlarge"
+            android:textStyle="normal" />
+
+    <ListView
+        android:id="@+id/lvToppings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlFooter"
+        android:layout_below="@+id/tvHeader"
+        android:divider="@null"
+        android:drawSelectorOnTop="false"
+        android:padding="@dimen/dimen_1x" />
+
+    <RelativeLayout
+        android:id="@+id/rlFooter"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dimen_1x"
+        android:paddingRight="@dimen/dimen_1x">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewLatoHeavy
+                android:id="@+id/btnSave"
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_press_radius_primarydark"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/dimen_1x"
+                android:text="@string/save"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal" />
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewLatoHeavy
+                android:id="@+id/btnCancel"
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_1x"
+                android:background="@drawable/bg_press_radius_primarydark"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/dimen_1x"
+                android:text="@string/cancel"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

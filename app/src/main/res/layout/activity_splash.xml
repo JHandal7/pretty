@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_2x">
+
+    <LinearLayout
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_logo"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_logo_group_white"/>
+
+      <!--  <com.moza.restaurantuser.widgets.textview.TextViewBoldItalic
+            android:visibility="gone"
+            android:text="@string/fastfood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:padding="@dimen/dimen_x1x"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_name_group"
+            android:textSize="@dimen/text_size_xhuge" />
+
+        <com.moza.restaurantuser.widgets.textview.TextViewLatoHeavy
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_1x"
+            android:text="@string/source_code"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_large" />-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dimen_6x"
+        android:layout_marginLeft="@dimen/dimen_2x"
+        android:layout_marginRight="@dimen/dimen_2x"
+        android:layout_marginTop="@dimen/dimen_4x"
+        android:orientation="vertical">
+
+        <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+            android:visibility="invisible"
+            android:id="@+id/tv_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_pressed_border_white"
+            android:gravity="center"
+            android:padding="@dimen/dimen_x1x"
+            android:text="@string/signup"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_xnormal" />
+
+        <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+
+            android:id="@+id/tv_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_2x"
+            android:background="@drawable/bg_pressed_radius_white"
+            android:gravity="center"
+            android:padding="@dimen/dimen_x1x"
+            android:text="@string/sign_in"
+            android:textAllCaps="true"
+            android:textColor="@color/red"
+            android:textSize="@dimen/text_size_xnormal" />
+
+        <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+            android:text="@string/suugroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_4x"
+            android:gravity="center"
+            android:padding="@dimen/dimen_x1x"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_xnormal" />
+
+    </LinearLayout>
+</RelativeLayout>

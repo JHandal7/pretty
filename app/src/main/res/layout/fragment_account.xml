@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dimen_1x"
+        android:layout_marginLeft="@dimen/dimen_1x"
+        android:layout_marginRight="@dimen/dimen_1x"
+        android:background="@drawable/bg_border_grey_radius_white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_avatar"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dimen_2x"
+            android:layout_marginTop="@dimen/dimen_2x"
+            android:src="@drawable/no_avatar" />
+
+        <com.suusoft.restaurantuser.widgets.textview.TextViewLatoHeavy
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_2x"
+            android:layout_marginRight="@dimen/dimen_2x"
+            android:gravity="center"
+            android:text="Wellcome! Ember Hear"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_large" />
+
+        <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+            android:id="@+id/tv_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_2x"
+            android:layout_marginRight="@dimen/dimen_2x"
+            android:layout_marginTop="@dimen/dimen_6x"
+            android:background="@drawable/bg_btn_app"
+            android:gravity="center"
+            android:padding="@dimen/dimen_x1x"
+            android:text="@string/profile"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_normal" />
+
+        <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+            android:id="@+id/tv_change_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_2x"
+            android:layout_marginRight="@dimen/dimen_2x"
+            android:layout_marginTop="@dimen/dimen_x1x"
+            android:background="@drawable/bg_btn_app"
+            android:gravity="center"
+            android:padding="@dimen/dimen_x1x"
+            android:text="@string/change_password"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_normal" />
+
+        <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+            android:id="@+id/tv_my_orders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_2x"
+            android:layout_marginRight="@dimen/dimen_2x"
+            android:layout_marginTop="@dimen/dimen_x1x"
+            android:background="@drawable/bg_btn_app"
+            android:gravity="center"
+            android:padding="@dimen/dimen_x1x"
+            android:text="@string/my_orders"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_normal" />
+
+        <com.suusoft.restaurantuser.widgets.textview.TextViewLatoBold
+            android:id="@+id/tv_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_2x"
+            android:layout_marginRight="@dimen/dimen_2x"
+            android:layout_marginTop="@dimen/dimen_x1x"
+            android:background="@drawable/bg_btn_app"
+            android:gravity="center"
+            android:padding="@dimen/dimen_x1x"
+            android:text="@string/about"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_normal" />
+
+    </LinearLayout>
+</LinearLayout>

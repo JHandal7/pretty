@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_marginTop="@dimen/dimen_6x"
+    android:layout_marginRight="@dimen/dimen_4x"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_radius_white_dialog">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <com.suusoft.restaurantuser.widgets.textview.TextViewLatoMedium
+            android:paddingTop="@dimen/dimen_3x"
+            android:layout_width="match_parent"
+            android:paddingLeft="@dimen/dimen_2x"
+            android:paddingRight="@dimen/dimen_2x"
+            android:layout_height="wrap_content"
+            android:text="@string/edit"
+            android:id="@+id/tv_edit"
+            android:paddingBottom="@dimen/dimen_2x"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_normal" />
+
+        <View
+            android:layout_marginLeft="@dimen/dimen_2x"
+            android:layout_marginRight="@dimen/dimen_2x"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <com.suusoft.restaurantuser.widgets.textview.TextViewLatoMedium
+            android:layout_width="wrap_content"
+            android:paddingLeft="@dimen/dimen_2x"
+            android:paddingRight="@dimen/dimen_2x"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_out"
+            android:id="@+id/tv_sign_out"
+            android:paddingTop="@dimen/dimen_2x"
+            android:paddingBottom="@dimen/dimen_3x"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_normal" />
+    </LinearLayout>
+</RelativeLayout>

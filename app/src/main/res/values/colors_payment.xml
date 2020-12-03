@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- payment method -->
+    <color name="bg_item_payment_method">#eaeaea</color>
+    <color name="bg_payment_method">#f4f4f5</color>
+    <color name="text_payment" >#3498db</color>
+    <color name="payment_item_divider">#ededed</color>
+    <color name="payment_text_hind">#9a999f</color>
+    <color name="payment_text_cancel">#c3c3c3</color>
+    <color name="payment_text_continue">#967adc</color>
+
+</resources>

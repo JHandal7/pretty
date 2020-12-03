@@ -1,0 +1,5 @@
+path: F:\Work\Android\SUU\product\Restaurant\Restaurant-User\Restaurant-Fastfood-Android-0702\ks.jks
+pass: suusoft.com
+
+alias: suusoft.com
+pass:suusoft.com

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_radius_white_dialog"
+    android:orientation="vertical">
+
+    <com.suusoft.restaurantuser.widgets.textview.TextViewLatoMedium
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_header_red_bold_dialog_radius"
+        android:gravity="center"
+        android:padding="@dimen/dimen_x1x"
+        android:text="@string/term_and_conditions_header"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_large" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/root_"
+            android:fillViewport="true"
+            android:paddingTop="@dimen/dimen_2x">
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewLatoMedium
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_2x"
+                android:layout_marginRight="@dimen/dimen_2x"
+                android:gravity="center"
+                android:text="@string/content_term_conditions"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_size_normal" />
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/root_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/dividerColor" />
+
+            <com.suusoft.restaurantuser.widgets.textview.TextViewLatoMedium
+                android:id="@+id/tv_close"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/bg_press_textview_radius_bottom"
+                android:gravity="center"
+                android:padding="@dimen/dimen_x1x"
+                android:text="@string/close"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_size_large" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

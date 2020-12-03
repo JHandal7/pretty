@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- main color -->
+    <color name="colorPrimary">#FF6925</color>
+    <color name="colorPrimaryDark">#872b02</color>
+    <color name="colorAccent">#FFA47B</color>
+    <color name="lightColorPrimary">#B6B6B6</color>
+    <color name="textColorPrimary">#212121</color>
+    <color name="textColorSecondary">#727272</color>
+    <color name="dividerColor">#B6B6B6</color>
+    <color name="textColorBtnApp">#FF6925</color>
+    <color name="splash">#d45102</color>
+
+    <!-- base color -->
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="red">#ff5d5d</color>
+    <color name="blue">#2196F3</color>
+    <color name="green">#4CAF50</color>
+    <color name="yellow">#f8e71c</color>
+    <color name="yellowDark">#f5a623</color>
+    <color name="grey">#9E9E9E</color>
+    <color name="light_grey">#f6f6f6</color>
+    <color name="text_notify_network">#607D8B</color>
+    <color name="purple">#9C27B0</color>
+
+
+    <color name="white_transparent_85">#D9ffffff</color>
+    <color name="grey_transparent_40">#40000000</color>
+    <color name="grey_transparent_60">#A6000000</color>
+    <color name="white_transparent_20">#33ffffff</color>
+    <color name="white_transparent_50">#80ffffff</color>
+    <color name="grey_transparent_20">#33000000</color>
+    <color name="green_transparent_80">#804CAF50</color>
+
+    <!-- social -->
+    <color name="facebook">#48649f</color>
+    <color name="google">#de3b45</color>
+    <color name="facebook_pressed">#FF577ECF</color>
+    <color name="google_pressed">#FFF4404B</color>
+
+    <!-- Tabs colors -->
+    <color name="unselected_tab_text">#96c2e0</color>
+
+    <!-- splash screen -->
+    <color name="bg_transparent">#88000000</color>
+
+    <!-- about us -->
+    <color name="grey_hard">#454545</color>
+    <color name="grey_light">#ededed</color>
+    <color name="grey_bold">#919191</color>
+
+    <!-- help -->
+    <color name="bg_item_help_group">#f6f6f6</color>
+
+    <color name="pink">#d8012c</color>
+    <color name="blue_facebook">#39579b</color>
+    <color name="color_background">#efefef</color>
+    <color name="color_alpha_black">#66000000</color>
+    <color name="color_alpha_white">#1AFFFFFF</color>
+    <color name="color_favourite">#b6d035</color>
+    <color name="color_comment">#56aaca</color>
+    <color name="color_red">#ff5d5d</color>
+    <color name="color_red_bold">#ff5d5d</color>
+    <color name="color_divider">#c7c7c7</color>
+    <color name="color_num">#312e2d</color>
+    <color name="color_white_alpha">#66ffffff</color>
+    <color name="color_share">#f6d700</color>
+    <color name="color_hight_light_bottom_bar">#ffff</color>
+    <color name="color_nornal_bottom_bar">#872b02</color>
+
+</resources>
